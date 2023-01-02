@@ -6,7 +6,7 @@ import db from "./SQLiteDatabse";
  */
 db.transaction((tx) => {
   //<<<<<<<<<<<<<<<<<<<<<<<< USE ISSO APENAS DURANTE OS TESTES!!! >>>>>>>>>>>>>>>>>>>>>>>
-  //tx.executeSql("DROP TABLE cars;");
+  //tx.executeSql("DROP TABLE persons;");
   //<<<<<<<<<<<<<<<<<<<<<<<< USE ISSO APENAS DURANTE OS TESTES!!! >>>>>>>>>>>>>>>>>>>>>>>
 
   tx.executeSql(
@@ -90,8 +90,8 @@ const find = (id) => {
 };
 
 /**
- * BUSCA UM REGISTRO POR MEIO DA MARCA (brand)
- * - Recebe a marca do carro;
+ * BUSCA UM REGISTRO POR MEIO DO NOME (name)
+ * - Recebe o nome
  * - Retorna uma Promise:
  *  - O resultado da Promise é um array com os objetos encontrados;
  *  - Pode retornar erro (reject) caso o ID não exista ou então caso ocorra erro no SQL;
